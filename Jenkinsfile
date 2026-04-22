@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        KUBECONFIG = 'C:\\ProgramData\\Jenkins\\.jenkins\\.kube\\config'
+    }
     stages {
         stage('Build Docker') {
             steps {
