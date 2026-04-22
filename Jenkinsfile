@@ -13,6 +13,7 @@ pipeline {
             steps {
                 bat 'kubectl apply -f deployment.yaml --validate=false'
                 bat 'kubectl apply -f service.yaml --validate=false'
+                bat 'kubectl rollout restart deployment webapp'
             }
         }
     }
